@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2gE-5b-vcK">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="9jK-Kg-032">
+            <objects>
+                <navigationController id="2gE-5b-vcK" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Zbe-h5-oW3">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="9hz-df-Lrh" kind="relationship" relationship="rootViewController" id="2o6-wt-934"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1R3-9b-hXW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1206" y="72"/>
+        </scene>
+        <!--Marvel Characters View Controller-->
+        <scene sceneID="I9i-Hs-DQA">
+            <objects>
+                <viewController id="9hz-df-Lrh" userLabel="Marvel Characters View Controller" customClass="PersonListViewController" customModule="MarvelApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3nB-yj-h9E">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hbi-xt-GJB">
+                                <rect key="frame" x="0.0" y="177.5" width="414" height="684.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sug-mo-J6h" userLabel="Search View">
+                                <rect key="frame" x="0.0" y="88" width="414" height="89.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQo-YB-uTA" userLabel="Search Button">
+                                        <rect key="frame" x="378" y="34" width="20" height="22"/>
+                                        <state key="normal" image="magnifyingglass" catalog="system"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Marvel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QbL-TK-eIF" userLabel="Marvel Label">
+                                        <rect key="frame" x="150" y="21.5" width="114" height="47"/>
+                                        <color key="backgroundColor" red="0.60644412039999995" green="0.11065364630000001" blue="0.1215436682" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="40"/>
+                                        <color key="textColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="QbL-TK-eIF" firstAttribute="centerY" secondItem="Sug-mo-J6h" secondAttribute="centerY" id="9rX-TL-tpZ"/>
+                                    <constraint firstItem="QbL-TK-eIF" firstAttribute="centerX" secondItem="Sug-mo-J6h" secondAttribute="centerX" id="XhB-sX-74G"/>
+                                    <constraint firstAttribute="trailing" secondItem="xQo-YB-uTA" secondAttribute="trailing" constant="16" id="eGa-1l-ndd"/>
+                                    <constraint firstItem="xQo-YB-uTA" firstAttribute="centerY" secondItem="Sug-mo-J6h" secondAttribute="centerY" id="hFQ-MD-hsg"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Sug-mo-J6h" firstAttribute="top" secondItem="YkO-5d-7tp" secondAttribute="top" id="37t-pg-WRq"/>
+                            <constraint firstItem="YkO-5d-7tp" firstAttribute="trailing" secondItem="hbi-xt-GJB" secondAttribute="trailing" id="MV3-G0-xHs"/>
+                            <constraint firstItem="hbi-xt-GJB" firstAttribute="leading" secondItem="YkO-5d-7tp" secondAttribute="leading" id="ZKi-08-57d"/>
+                            <constraint firstItem="Sug-mo-J6h" firstAttribute="leading" secondItem="YkO-5d-7tp" secondAttribute="leading" id="h2V-Ak-PyW"/>
+                            <constraint firstItem="YkO-5d-7tp" firstAttribute="bottom" secondItem="hbi-xt-GJB" secondAttribute="bottom" id="jFc-8c-wmq"/>
+                            <constraint firstItem="YkO-5d-7tp" firstAttribute="trailing" secondItem="Sug-mo-J6h" secondAttribute="trailing" id="oNR-va-hc9"/>
+                            <constraint firstItem="hbi-xt-GJB" firstAttribute="top" secondItem="Sug-mo-J6h" secondAttribute="bottom" id="q6d-bi-DbU"/>
+                            <constraint firstItem="Sug-mo-J6h" firstAttribute="height" secondItem="3nB-yj-h9E" secondAttribute="height" multiplier="0.1" id="wdh-lY-I6f"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YkO-5d-7tp"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vDS-lv-RY6"/>
+                    <connections>
+                        <outlet property="tableView" destination="hbi-xt-GJB" id="IBT-aM-dH9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fpw-FJ-WLR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-107.24637681159422" y="71.651785714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+    </resources>
+</document>

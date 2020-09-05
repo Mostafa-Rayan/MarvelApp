@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  MarvelApp
+
+  Created by Mostafa Rayan on 9/4/20.
+  
+*/
+
+"search" = "Search";
+"loading" = "Loading";
+"defaultError" = "An error occurred during the request, please try reload the page.";
+"ok" = "OK";
